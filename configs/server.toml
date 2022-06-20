@@ -1,0 +1,6 @@
+bind_addr = ":8070"
+log_level = "info"
+
+[store]
+
+URL = "test_user:pass@/TASK"
