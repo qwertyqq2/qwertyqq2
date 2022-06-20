@@ -161,7 +161,9 @@ func(s *APIServer) handleTxId() http.HandlerFunc{
 			return
 		}
 		Tx:=s.store.Tx().GetAllTxById(req.UID)
-		fmt.Println(Tx)
+		for _, t := range Tx {
+			fmt.Println(t)
+		}
 	}
 }
 
@@ -177,7 +179,9 @@ func(s *APIServer) handleTxEmail() http.HandlerFunc{
 			return
 		}
 		Tx:=s.store.Tx().GetAllTxByEmail(req.Email)
-		fmt.Println(Tx)
+		for _, t := range Tx {
+			fmt.Println(t)
+		}
 	}
 }
 
